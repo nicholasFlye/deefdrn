@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="gurus">
+        <item>"Anime Manga"</item>
+        <item>"Comic Books"</item>
+        <item>"Comic Movie"</item>
+        <item>"Doctor Who"</item>
+        <item>"Godzilla"</item>
+        <item>"GOT"</item>
+        <item>"Harry Potter"</item>
+        <item>"Sci-Fi"</item>
+        <item>"Sherlock"</item>
+        <item>"Star Trek"</item>
+        <item>"Star Wars"</item>
+        <item>"Supernatural"</item>
+        <item>"Video Games"</item>
+        <item>"Walking Dead"</item>
+    </string-array>
+
+    <string-array
+        name="navigation">
+        <item>"My Feed"</item>
+        <item>"Memes"</item>
+        <item>"Fandom Fights"</item>
+        <item>"Nrdcast"</item>
+    </string-array>
+
+    <string-array
+        name="postTitles">
+        <item>"NRDALERT"</item>
+        <item>"GURU ARTICLE"</item>
+        <item>"GURU POST"</item>
+        <item>"MEME"</item>
+        <item>"FANDOM FIGHT"</item>
+    </string-array>
+</resources>

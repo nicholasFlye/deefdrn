@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="nrd.waco.nrdfeed.MainActivity"
+    > -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="89dp"
+                android:id="@+id/top"
+                android:src="@drawable/app_interface_top"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/topRight"
+                android:layout_toRightOf="@+id/topLeft" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:id="@+id/highlight"
+                android:src="@drawable/highlight"
+                android:layout_below="@+id/top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-9dp"
+                android:layout_marginLeft="60dp" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/sliding_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_below="@+id/top"
+                app:tabMode = "scrollable"
+                app:tabPaddingStart="0dp"
+                app:tabPaddingEnd="0dp"
+                />
+           <!-- <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/my_recycle_view"
+                android:layout_below="@+id/top" /> -->
+
+            <android.support.v4.view.ViewPager
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/postspager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sliding_tabs"
+                android:layout_toRightOf="@+id/left"
+                android:layout_above="@+id/bottom"
+                android:layout_toLeftOf="@+id/right" />
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="111dp"
+                android:id="@+id/topLeft"
+                android:src="@drawable/app_interface_tl"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="111dp"
+                android:id="@+id/topRight"
+                android:src="@drawable/app_interface_tr"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:id="@+id/navBtn"
+                android:src="@drawable/btn_nav"
+                android:layout_above="@+id/left"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="-25dp" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/left"
+                android:src="@drawable/app_interface_left"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/bottomLeft"
+                android:layout_below="@+id/topLeft" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/right"
+                android:src="@drawable/app_interface_right"
+                android:layout_below="@+id/topRight"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/bottomRight" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:id="@+id/bottom"
+                android:src="@drawable/app_interface_bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/bottomLeft"
+                android:layout_toLeftOf="@+id/bottomRight" />
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="79dp"
+                android:id="@+id/bottomLeft"
+                android:src="@drawable/app_interface_bl"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="79dp"
+                android:id="@+id/bottomRight"
+                android:src="@drawable/app_interface_br"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="225dp"
+                android:layout_height="225dp"
+                android:id="@+id/nrdFeedLogo"
+                android:src="@drawable/nrdfeed"
+                android:layout_above="@+id/highlight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+    <ExpandableListView
+        android:id="@+id/left_drawer"
+        android:layout_width="275dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:groupIndicator="@null"
+        android:dividerHeight="2dp"
+        android:background="#111"
+        android:childDivider="@color/nrdTitleColor"
+        android:focusable="false" />
+</android.support.v4.widget.DrawerLayout>
+
+
